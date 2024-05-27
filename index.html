@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        .calculator {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            max-width: 200px;
+            margin: 50px auto;
+        }
+        .calculator input,
+        .calculator button {
+            font-size: 1.5em;
+            padding: 20px;
+            text-align: center;
+        }
+        .calculator .display {
+            grid-column: span 4;
+            background: #222;
+            color: white;
+        }
+        .calculator .equal {
+            grid-column: span 2;
+        }
+        .calculator .clear {
+            grid-column: span 2;
+            background: #f00;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" class="display" id="display" disabled>
+        <button onclick="clearDisplay()" class="clear">C</button>
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('/')">/</button>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('*')">*</button>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('-')">-</button>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="appendToDisplay('.')">.</button>
+        <button onclick="calculate()" class="equal">=</button>
+        <button onclick="appendToDisplay('+')">+</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
